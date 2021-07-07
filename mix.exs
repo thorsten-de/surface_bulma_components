@@ -4,7 +4,7 @@ defmodule SurfaceBulmaComponents.MixProject do
   def project do
     [
       app: :surface_bulma_components,
-      destription: "More Surface components based on Bulma"
+      destription: "More Surface components based on Bulma",
       version: "0.1.0",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
