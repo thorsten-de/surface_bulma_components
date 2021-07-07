@@ -15,7 +15,7 @@ Surface.Catalogue.Server.start(
   render_errors: [view: Surface.Catalogue.ErrorView],
   live_reload: [
     patterns: [
-      ~r"lib/surface_bulma/.*(ex)$"
+      ~r"lib/surface_bulma_components/.*(ex)$"
     ]
   ]
 )

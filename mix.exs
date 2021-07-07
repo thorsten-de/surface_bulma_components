@@ -36,7 +36,8 @@ defmodule SurfaceBulmaComponents.MixProject do
   def catalogues do
     [
       "deps/surface_bulma/priv/catalogue",
-      "deps/surface/priv/catalogue"
+      "deps/surface/priv/catalogue",
+      "priv/catalogue"
     ]
   end
 
