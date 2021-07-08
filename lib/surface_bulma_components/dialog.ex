@@ -1,13 +1,21 @@
 defmodule SurfaceBulmaComponents.Dialog do
-  use Surface.LiveComponent
+  @moduledoc """
+  A modal dialog component with working close button
+  """
 
+  use Surface.LiveComponent
   alias SurfaceBulma.Button
 
+  @doc "visibility of modal dialog"
   data visible, :boolean, default: false
 
+  @doc "title of this dialog"
   prop title, :string
 
+  @doc "handler for ok button clicked"
   prop ok, :event
+
+  @doc "handler for closing the dialog, defaults to hiding"
   prop close, :event, default: "hide"
 
   slot default, required: true
