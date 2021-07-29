@@ -52,7 +52,7 @@ defmodule SurfaceBulmaComponents.MixProject do
       {:surface_catalogue, "~> 0.1.0", only: [:dev, :test]},
       {:surface_font_awesome, "~> 0.2.0"},
       {:surface_bulma, "~> 0.2.0"},
-      {:surface, "~> 0.5.0"}
+      {:surface, "~> 0.5.2"}
     ]
   end
 end
