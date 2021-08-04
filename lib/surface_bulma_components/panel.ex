@@ -8,7 +8,7 @@ defmodule SurfaceBulmaComponents.Panel do
   prop color, :string, values: ~w(black dark light white primary link info success warning danger)
 
   @doc "Panel content goes here."
-  slot default
+  slot default, required: true
 
   def render(assigns) do
     ~F"""
