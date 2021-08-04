@@ -24,7 +24,7 @@ defmodule SurfaceBulmaComponents.Breadcrumb do
     breadcrumbs =
       breadcrumbs
       |> Enum.map(fn
-        crumb when is_map(crumb) -> IO.inspect(crumb)
+        crumb when is_map(crumb) -> Map.put_new(crumb, :to, "#")
         label when is_binary(label) -> %{label: label, to: "#"}
       end)
 
