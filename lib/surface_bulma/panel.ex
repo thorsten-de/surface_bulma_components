@@ -2,7 +2,7 @@ defmodule SurfaceBulma.Panel do
   use Surface.Component
 
   @doc "Text inside the panel header"
-  prop heading, :string, default: nil
+  prop title, :string, default: nil
 
   @doc "The color of the tag"
   prop color, :string, values: ~w(black dark light white primary link info success warning danger)
@@ -10,12 +10,16 @@ defmodule SurfaceBulma.Panel do
   @doc "Panel content goes here."
   slot default, required: true
 
+  slot header
+
   def render(assigns) do
     ~F"""
       <nav class={"panel", "is-#{@color}": @color}>
-        <p class="panel-heading" :if={@heading}>
-          {@heading}
-        </p>
+        <header class="panel-heading" :if={@title || slot_assigned?(:header) }>
+          <#slot name="header">
+            {@title}
+          </#slot>
+        </header>
         <#slot />
       </nav>
     """
