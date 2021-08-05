@@ -1,4 +1,4 @@
-defmodule SurfaceBulmaComponents.Panel.Block do
+defmodule SurfaceBulma.Panel.Block do
   use Surface.Component
 
   alias SurfaceFontAwesome.Icon, as: FA

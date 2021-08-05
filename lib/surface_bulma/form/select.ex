@@ -1,4 +1,4 @@
-defmodule SurfaceBulmaComponents.Form.Select do
+defmodule SurfaceBulma.Form.Select do
   @moduledoc """
   Defines a select.
 

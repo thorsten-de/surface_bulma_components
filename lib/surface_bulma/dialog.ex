@@ -1,4 +1,4 @@
-defmodule SurfaceBulmaComponents.Dialog do
+defmodule SurfaceBulma.Dialog do
   @moduledoc """
   A modal dialog component with working close button
   """
@@ -7,7 +7,7 @@ defmodule SurfaceBulmaComponents.Dialog do
   alias SurfaceBulma.Button
 
   @doc "visibility of modal dialog"
-  data visible, :boolean, default: false
+  prop visible, :boolean, default: false
 
   @doc "title of this dialog"
   prop title, :string
