@@ -3,7 +3,7 @@ defmodule SurfaceBulma.Breadcrumb do
   Simple navigation component
   """
   use Surface.Component
-  alias Surface.Components.Link
+  alias Surface.Components.LiveRedirect
 
   @doc """
   List of breadcrumbs to display. Can be a list of labels or a list of maps
@@ -43,7 +43,7 @@ defmodule SurfaceBulma.Breadcrumb do
           {#for b <- @breadcrumbs}
             <li class={"is-active": b[:is_active]} title={b[:title]}>
               <#slot :args={item: b}>
-                <Link to={b[:to]} label={b[:label]} />
+                <LiveRedirect to={b[:to]} label={b[:label]} />
               </#slot>
             </li>
           {/for}
