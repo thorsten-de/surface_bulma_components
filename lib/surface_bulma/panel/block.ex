@@ -11,11 +11,13 @@ defmodule SurfaceBulma.Panel.Block do
 
   prop active, :boolean, default: false
 
+  prop class, :css_class, default: []
+
   slot default
 
   def render(%{link_to: link} = assigns) when is_binary(link) do
     ~F"""
-      <a class={"panel-block", "is-active": @active} href={@link_to}>
+      <a class={"panel-block", @class, "is-active": @active} href={@link_to}>
         <#slot>
           <div :if={@icon} class="panel-icon">
             <FA icon={@icon}/>
@@ -28,7 +30,7 @@ defmodule SurfaceBulma.Panel.Block do
 
   def render(assigns) do
     ~F"""
-      <div class={"panel-block", "is-active": @active}>
+      <div class={"panel-block", @class, "is-active": @active}>
         <#slot>
           <div :if={@icon} class="panel-icon">
             <FA icon={@icon}/>
