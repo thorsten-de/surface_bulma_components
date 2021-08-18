@@ -1,6 +1,7 @@
 defmodule SurfaceBulma.Panel.Block do
   use Surface.Component
 
+  alias Surface.Components.LiveRedirect
   alias SurfaceFontAwesome.Icon, as: FA
 
   prop label, :string
@@ -17,27 +18,27 @@ defmodule SurfaceBulma.Panel.Block do
 
   def render(%{link_to: link} = assigns) when is_binary(link) do
     ~F"""
-      <a class={"panel-block", @class, "is-active": @active} href={@link_to}>
-        <#slot>
-          <div :if={@icon} class="panel-icon">
-            <FA icon={@icon}/>
-          </div>
-          {@label}
-        </#slot>
-      </a>
+    <LiveRedirect class={"panel-block", @class, "is-active": @active} to={@link_to}>
+      <#slot>
+        <div :if={@icon} class="panel-icon">
+          <FA icon={@icon} />
+        </div>
+        {@label}
+      </#slot>
+    </LiveRedirect>
     """
   end
 
   def render(assigns) do
     ~F"""
-      <div class={"panel-block", @class, "is-active": @active}>
-        <#slot>
-          <div :if={@icon} class="panel-icon">
-            <FA icon={@icon}/>
-          </div>
-          {@label}
-        </#slot>
-      </div>
+    <div class={"panel-block", @class, "is-active": @active}>
+      <#slot>
+        <div :if={@icon} class="panel-icon">
+          <FA icon={@icon} />
+        </div>
+        {@label}
+      </#slot>
+    </div>
     """
   end
 end

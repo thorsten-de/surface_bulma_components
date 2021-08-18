@@ -14,14 +14,14 @@ defmodule SurfaceBulma.Panel do
 
   def render(assigns) do
     ~F"""
-      <nav class={"panel", "is-#{@color}": @color}>
-        <header class="panel-heading" :if={@title || slot_assigned?(:header) }>
-          <#slot name="header">
-            {@title}
-          </#slot>
-        </header>
-        <#slot />
-      </nav>
+    <nav class={"panel", "is-#{@color}": @color}>
+      <header class="panel-heading" :if={@title || slot_assigned?(:header)}>
+        <#slot name="header">
+          {@title}
+        </#slot>
+      </header>
+      <#slot />
+    </nav>
     """
   end
 end

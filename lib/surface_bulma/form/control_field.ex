@@ -29,13 +29,13 @@ defmodule SurfaceBulma.Form.ControlField do
     has_errors = Keyword.has_key?(form.errors, assigns.name)
 
     ~F"""
-      <Field {=@name} class={"field", "has-errors": has_errors}>
-        <ErrorTag class={"help is-pulled-right"}/>
-        <Label text={@label}/>
-        <div >
-          <#slot />
-        </div>
-      </Field>
+    <Field {=@name} class={"field", "has-errors": has_errors}>
+      <ErrorTag class="help is-pulled-right" />
+      <Label text={@label} />
+      <div>
+        <#slot />
+      </div>
+    </Field>
     """
   end
 end

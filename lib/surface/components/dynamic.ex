@@ -21,7 +21,7 @@ defmodule Surface.Components.Dynamic do
       |> Map.merge(%{__surface__: %{groups: %{__default__: %{binding: false, size: 0}}}})
 
     ~F"""
-    { live_component(@component, props) }
+    {live_component(@component, props)}
     """
   end
 end

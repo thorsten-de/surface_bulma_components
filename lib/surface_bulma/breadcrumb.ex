@@ -38,17 +38,17 @@ defmodule SurfaceBulma.Breadcrumb do
 
   def render(assigns) do
     ~F"""
-      <nav class={"breadcrumb", @class} aria-label="breadcrumbs">
-        <ul>
-          {#for b <- @breadcrumbs}
-            <li class={"is-active": b[:is_active]} title={b[:title]}>
-              <#slot :args={item: b}>
-                <LiveRedirect to={b[:to]} label={b[:label]} />
-              </#slot>
-            </li>
-          {/for}
-        </ul>
-      </nav>
+    <nav class={"breadcrumb", @class} aria-label="breadcrumbs">
+      <ul>
+        {#for b <- @breadcrumbs}
+          <li class={"is-active": b[:is_active]} title={b[:title]}>
+            <#slot :args={item: b}>
+              <LiveRedirect to={b[:to]} label={b[:label]} />
+            </#slot>
+          </li>
+        {/for}
+      </ul>
+    </nav>
     """
   end
 end

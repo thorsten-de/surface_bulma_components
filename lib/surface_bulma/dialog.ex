@@ -7,18 +7,18 @@ defmodule SurfaceBulma.Dialog do
   alias SurfaceBulma.Button
 
   @doc "visibility of modal dialog"
-  prop visible, :boolean, default: false
+  prop(visible, :boolean, default: false)
 
   @doc "title of this dialog"
-  prop title, :string
+  prop(title, :string)
 
   @doc "handler for ok button clicked"
-  prop ok, :event
+  prop(ok, :event)
 
   @doc "handler for closing the dialog, defaults to hiding"
-  prop close, :event, default: "hide"
+  prop(close, :event, default: "hide")
 
-  slot default, required: true
+  slot(default, required: true)
 
   def render(assigns) do
     ~F"""
