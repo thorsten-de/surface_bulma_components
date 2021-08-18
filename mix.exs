@@ -50,6 +50,7 @@ defmodule SurfaceBulmaComponents.MixProject do
       {:floki, "~> 0.25.0", only: :test},
       {:jason, "~> 1.0"},
       # {:surface_catalogue, "~> 0.1.0", only: [:dev, :test]},
+      {:mime, "~> 1.6"},
       {:surface_font_awesome, "~> 0.2.0"},
       {:surface_formatter, "~> 0.5.1"},
       {:surface_bulma, "~> 0.2.0"},
