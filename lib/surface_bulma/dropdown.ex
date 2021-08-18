@@ -15,8 +15,13 @@ defmodule SurfaceBulma.Dropdown do
   @doc "the label shown on the trigger button"
   prop label, :string
 
+  @doc "triggered is fired when the default trigger button is clicked"
+  prop triggered, :event
+
+  @doc "override the default trigger button"
   slot trigger
 
+  @doc "the content of the dropdown menu"
   slot default
 
   def render(assigns) do
@@ -24,7 +29,7 @@ defmodule SurfaceBulma.Dropdown do
     <div class={"dropdown", "is-active": @active, "is-hoverable": @hoverable}>
       <div class="dropdown-trigger">
         <#slot name="trigger">
-          <Button opts={"aria-haspopup": true}>
+          <Button opts={"aria-haspopup": true} click={@triggered}>
             <span>{@label}</span>
             <FA icon="angle-down" />
           </Button>
