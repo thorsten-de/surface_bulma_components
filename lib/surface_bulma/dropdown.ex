@@ -4,7 +4,7 @@ defmodule SurfaceBulma.Dropdown do
   """
   use Surface.Component
   alias SurfaceBulma.Button
-  alias SurfaceFontAwesome.Icon, as: FA
+  alias SurfaceBulma.Icon.FontAwesome, as: FA
 
   @doc "the dropdown will be shown all the time, managed by parent"
   prop active, :boolean, default: false
