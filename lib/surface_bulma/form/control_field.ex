@@ -13,12 +13,6 @@ defmodule SurfaceBulma.Form.ControlField do
   @doc "The text of the label. Generated from name, if omitted"
   prop label, :string
 
-  @doc "The CSS class for the generated `<div>` element"
-  prop field_class, :css_class
-
-  @doc "The CSS class for the internal control element"
-  prop control_class, :css_class
-
   @doc """
   The content for the field
   """

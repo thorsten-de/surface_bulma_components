@@ -20,30 +20,21 @@ defmodule SurfaceBulma.Breadcrumb do
   """
   slot default, args: [:item]
 
-  def update(%{breadcrumbs: breadcrumbs} = assigns, socket) do
+  def render(assigns) do
     breadcrumbs =
-      breadcrumbs
+      assigns.breadcrumbs
       |> Enum.map(fn
         crumb when is_map(crumb) -> Map.put_new(crumb, :to, "#")
         label when is_binary(label) -> %{label: label, to: "#"}
       end)
 
-    socket =
-      socket
-      |> assign(assigns)
-      |> assign(:breadcrumbs, breadcrumbs)
-
-    {:ok, socket}
-  end
-
-  def render(assigns) do
     ~F"""
     <nav class={"breadcrumb", @class} aria-label="breadcrumbs">
       <ul>
-        {#for b <- @breadcrumbs}
+        {#for b <- breadcrumbs}
           <li class={"is-active": b[:is_active]} title={b[:title]}>
             <#slot :args={item: b}>
-              <LiveRedirect to={b[:to]} label={b[:label]} />
+              <LiveRedirect to={b[:to]} label={b[:label]} opts={[]}/>
             </#slot>
           </li>
         {/for}
