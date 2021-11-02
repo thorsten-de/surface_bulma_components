@@ -54,7 +54,7 @@ defmodule SurfaceBulmaComponents.MixProject do
       #{:surface, github: "surface-ui/surface", override: true},
       {:surface_bulma, github: "surface-ui/surface_bulma"},
       # {:surface_font_awesome, "~> 0.2.0"},
-      {:surface_formatter, "~> 0.5.1"}
+      {:surface_formatter, "~> 0.6"}
     ]
   end
 end
