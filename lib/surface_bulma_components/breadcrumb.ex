@@ -1,4 +1,4 @@
-defmodule SurfaceBulmaComponentBreadcrumb do
+defmodule SurfaceBulmaComponents.Breadcrumb do
   @moduledoc """
   Simple navigation component
   """
