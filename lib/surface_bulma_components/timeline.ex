@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Timeline do
+defmodule SurfaceBulmaComponents.Timeline do
   use Surface.Component
 
   prop centered, :boolean, default: false

@@ -47,14 +47,16 @@ defmodule SurfaceBulmaComponents.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:floki, "~> 0.25.0", only: :test},
+      {:floki, "~> 0.33.0", only: :test},
       {:jason, "~> 1.0"},
       # {:surface_catalogue, "~> 0.1.0", only: [:dev, :test]},
       # {:mime, "~> 1.6"},
-      #{:surface, github: "surface-ui/surface", override: true},
-      {:surface_bulma, github: "surface-ui/surface_bulma"},
+      # {:surface, github: "surface-ui/surface", override: true},
+      # {:surface_bulma, github: "surface-ui/surface_bulma"},
       # {:surface_font_awesome, "~> 0.2.0"},
-      {:surface_formatter, "~> 0.6"}
+      {:surface_formatter, "~> 0.7.5"},
+
+      {:surface_bulma, "~> 0.4.0"}
     ]
   end
 end

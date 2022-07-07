@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Dialog do
+defmodule SurfaceBulmaComponents.Dialog do
   @moduledoc """
   A modal dialog component with working close button
   """

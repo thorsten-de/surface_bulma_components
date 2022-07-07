@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Timeline.Header do
+defmodule SurfaceBulmaComponents.Timeline.Header do
   use Surface.Component
 
   slot default

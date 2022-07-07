@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Timeline.Item do
+defmodule SurfaceBulmaComponents.Timeline.Item do
   use Surface.Component
 
   prop heading, :string

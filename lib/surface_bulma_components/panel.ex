@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Panel do
+defmodule SurfaceBulmaComponents.Panel do
   use Surface.Component
 
   @doc "Text inside the panel header"
