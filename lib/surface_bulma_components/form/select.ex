@@ -45,6 +45,13 @@ defmodule SurfaceBulmaComponents.Form.Select do
     helper_opts = props_to_opts(assigns, [:prompt, :selected])
     attr_opts = props_to_attr_opts(assigns, class: get_config(:default_class))
 
+    opts =
+      assigns.opts
+      |> Keyword.merge(helper_opts)
+      |> Keyword.merge(attr_opts)
+
+    assigns = assign(assigns, opts: opts)
+
     ~F"""
     <InputContext assigns={assigns} :let={form: form, field: field}>
       <div class={:select, "is-fullwidth"}>
