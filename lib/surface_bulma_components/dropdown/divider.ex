@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Dropdown.Divider do
+defmodule SurfaceBulmaComponents.Dropdown.Divider do
   @moduledoc """
   a *horizontal line* to seperate dropdown items
   """

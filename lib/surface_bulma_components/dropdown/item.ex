@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Dropdown.Item do
+defmodule SurfaceBulmaComponents.Dropdown.Item do
   @moduledoc """
   A single item in the dropdown, either a _div_ (default) or an _a_-element,
   if *to* is given

@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Panel.Block do
+defmodule SurfaceBulmaComponents.Panel.Block do
   use Surface.Component
 
   alias Surface.Components.LiveRedirect

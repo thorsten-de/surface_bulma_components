@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Dropdown do
+defmodule SurfaceBulmaComponents.Dropdown do
   @moduledoc """
   An interactive *dropdown menu* for discoverable content
   """

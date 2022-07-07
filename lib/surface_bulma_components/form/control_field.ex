@@ -1,4 +1,4 @@
-defmodule SurfaceBulma.Form.ControlField do
+defmodule SurfaceBulmaComponents.Form.ControlField do
   @moduledoc """
   combines a bulma field with  label, control and error tag into
   a form
